@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct SshwitchApp: App {
     @State private var configManager = SSHConfigManager()
+    @Environment(\.openWindow) private var openWindow
 
     var body: some Scene {
         MenuBarExtra {
@@ -38,6 +39,11 @@ struct SshwitchApp: App {
 
             Divider()
 
+            Button("About Sshwitch") {
+                openWindow(id: "about")
+                NSApplication.shared.activate()
+            }
+
             Button("Refresh") {
                 configManager.reload()
             }
@@ -50,5 +56,11 @@ struct SshwitchApp: App {
         } label: {
             Image(systemName: "arrow.triangle.swap")
         }
+
+        Window("About Sshwitch", id: "about") {
+            AboutView()
+        }
+        .windowResizability(.contentSize)
+        .defaultPosition(.center)
     }
 }
