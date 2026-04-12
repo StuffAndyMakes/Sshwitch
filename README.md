@@ -39,13 +39,14 @@ Each profile is a **complete, standalone SSH config** — not a fragment. This m
 ## The Menu
 
 ```
-┌──────────────────┐
-│ Personal      ✓  │
-│ Work             │
-│──────────────────│
-│ Refresh      ⌘R  │
-│ Quit         ⌘Q  │
-└──────────────────┘
+┌──────────────────────┐
+│ Personal          ✓  │
+│ Work                 │
+│──────────────────────│
+│ Refresh          ⌘R  │
+│ About Sshwitch       │
+│ Quit             ⌘Q  │
+└──────────────────────┘
 ```
 
 ## Verifying It Worked
