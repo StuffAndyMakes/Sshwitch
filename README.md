@@ -4,6 +4,18 @@
 
 Sshwitch is a tiny macOS menubar app that lets you swap between SSH configurations with a single click. No windows. No dock icon. No drama. Just click, pick, and `git push`.
 
+## Why?
+
+Got multiple GitHub accounts? Welcome to SSH key roulette.
+
+The "official" solution is to give each account a Host alias in your SSH config and rewrite every git remote URL to match. Forget once? Congrats, you just pushed your weekend side project with your corporate identity.
+
+You could set `GIT_SSH_COMMAND` per terminal session — if you enjoy forgetting environment variables. Or configure `core.sshCommand` on every single repo — if you enjoy tedium. Load multiple keys into the SSH agent? GitHub takes the first one it likes, not the one you meant.
+
+The root problem is that GitHub identifies you solely by your SSH key, and SSH's key selection is first-match, not intent-based. There is no native way to say "use this identity right now."
+
+Sshwitch fixes this with the most brutal possible approach: one config to rule them all. Your profiles live as standalone files in `~/.ssh/`, and switching is a single click from the menubar. No host aliases, no per-repo config, no environment variables, no guessing. Standard `git@github.com` URLs just work — always pointing at whichever account you chose last.
+
 ## How It Works
 
 Sshwitch looks for profile files in `~/.ssh/` named `config.<profile>`. When you select a profile from the menubar, it copies that file to `~/.ssh/config`. That's it. That's the whole app.
