@@ -39,20 +39,21 @@ struct SshwitchApp: App {
 
             Divider()
 
-            Button("About Sshwitch") {
-                openWindow(id: "about")
-                NSApplication.shared.activate()
-            }
-
             Button("Refresh") {
                 configManager.reload()
             }
             .keyboardShortcut("r")
 
+            Button("About Sshwitch") {
+                openWindow(id: "about")
+                NSApplication.shared.activate()
+            }
+
             Button("Quit") {
                 NSApplication.shared.terminate(nil)
             }
             .keyboardShortcut("q")
+
         } label: {
             Image(systemName: "arrow.triangle.swap")
         }

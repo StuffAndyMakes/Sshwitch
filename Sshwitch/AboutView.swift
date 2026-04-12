@@ -38,14 +38,18 @@ struct AboutView: View {
             Divider()
                 .frame(width: 200)
 
-            Text("Made by Andy Frey")
+            Text("This Stuff Made by Andy")
                 .font(.callout)
+
+            Link("StuffAndyMakes.com/sshwitch",
+                 destination: URL(string: "https://StuffAndyMakes.com/sshwitch")!)
+                .font(.caption)
 
             Link("github.com/StuffAndyMakes/Sshwitch",
                  destination: URL(string: "https://github.com/StuffAndyMakes/Sshwitch")!)
                 .font(.caption)
         }
         .padding(32)
-        .frame(width: 300)
+        .frame(width: 320)
     }
 }
