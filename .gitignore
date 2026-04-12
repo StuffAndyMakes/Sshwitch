@@ -1,0 +1,17 @@
+# Xcode user-specific data
+xcuserdata/
+*.xcuserdatad/
+
+# Build products
+build/
+DerivedData/
+
+# Xcode temporary files
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# macOS system files
+.DS_Store
+*.swp
+*~
