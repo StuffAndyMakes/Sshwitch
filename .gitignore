@@ -11,6 +11,14 @@ DerivedData/
 *.xccheckout
 *.xcscmblueprint
 
+# Build artifacts
+*.app
+*.dmg
+
+# Design source files
+Design Assets/
+*Exports/
+
 # macOS system files
 .DS_Store
 *.swp

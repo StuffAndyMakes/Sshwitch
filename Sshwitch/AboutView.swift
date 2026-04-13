@@ -18,9 +18,9 @@ struct AboutView: View {
 
     var body: some View {
         VStack(spacing: 16) {
-            Image(systemName: "arrow.triangle.swap")
-                .font(.system(size: 48))
-                .foregroundStyle(.primary)
+            Image(nsImage: NSApplication.shared.applicationIconImage)
+                .resizable()
+                .frame(width: 96, height: 96)
 
             Text("Sshwitch")
                 .font(.title)
