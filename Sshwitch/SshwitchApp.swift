@@ -55,7 +55,7 @@ struct SshwitchApp: App {
             .keyboardShortcut("q")
 
         } label: {
-            Image(systemName: "arrow.triangle.swap")
+            Image("MenubarIcon")
         }
 
         Window("About Sshwitch", id: "about") {
