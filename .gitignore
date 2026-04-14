@@ -11,6 +11,9 @@ DerivedData/
 *.xccheckout
 *.xcscmblueprint
 
+# Distribution docs (contain credentials/team IDs)
+APP-STORE-SUBMISSION.md
+
 # Build artifacts
 *.app
 *.dmg
